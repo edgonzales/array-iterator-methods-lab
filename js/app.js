@@ -86,4 +86,28 @@ const people = [
     acc[item] = acc[item] ? acc[item] + 1 : 1;
     return acc;
   }, {});
+  console.log(itemInstanceCount)
  // Note the initial value is an empty object
+
+ // QUESTIONS
+ // 1. Explain the logic of not having an initial Value in the reduce function, applied to Ex 7.
+
+ const devs = [
+    { name: 'Wes', year: 1988 },
+    { name: 'Kait', year: 1986 },
+    { name: 'Irv', year: 1970 },
+    { name: 'Lux', year: 2015 }
+  ];
+  
+  // Array.prototype.some()
+  // 8. Check if at least one person is 19 or older?
+  // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
+  const todaysYear = new Date().getFullYear();
+  console.log(todaysYear);
+  const isNineteenOrOlder = devs.some((dev) => {
+    if((todaysYear - dev.year) >= 19) {
+        return true;
+    } else {
+        return false;
+    }
+  })
