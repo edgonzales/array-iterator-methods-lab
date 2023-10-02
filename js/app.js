@@ -23,8 +23,11 @@ console.log(inventors1500s);
 // Array.prototype.map()
 // 2. Map the array of the inventors into a new array containing objects with just the first and last names as properties
 // Hint:  Return a new object literal from the callback (don't mutate the object being passed in to map)
-//let names = "";
 const names = inventors.map(function(name) {
     let firstLastNames = `${name.first} ${name.last}`;
     return firstLastNames;
 })
+
+// Array.prototype.sort()
+// 3. Sort the inventors by birth date (year property), in ascending order
+inventors.sort((a, b) => a.year - b.year);
