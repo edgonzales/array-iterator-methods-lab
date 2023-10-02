@@ -36,3 +36,11 @@ inventors.sort((a, b) => a.year - b.year);
 // 4. Find the inventor object with the first name of 'Ada'
 const firstNameAda = inventors.find((name) => name.first === 'Ada')
 console.log(firstNameAda);
+
+// Array.prototype.reduce()
+// 5. How many years did all the inventors live?
+const ages = inventors.map(function(age) {
+    let passedMinusYear = age.passed - age.year;
+    return passedMinusYear;
+})
+const ageSum = ages.reduce((acc, age) => acc + age, 0);
