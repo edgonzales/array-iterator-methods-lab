@@ -69,3 +69,21 @@ const people = [
     let personJoined = personSplit.join(" ")
     return personJoined;
   })
+
+  const data = [
+    'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
+    'bike', 'walk', 'car', 'van', 'car', 'truck'
+  ];
+  
+  // Array.prototype.reduce()
+  // 7. Count the number of instances for each of the data items. The reduce should return an object where the keys are 
+  // 'car', 'truck', etc. and the values are the count.
+  // Hint: Since you want to return an object, be sure to pass an empty {} for the initial value of the "accumulator".
+  
+  const itemInstanceCount = data.reduce((acc, item) => {
+// Assign 1 if first time seeing a certain "type" of item
+  // otherwise increase count by 1
+    acc[item] = acc[item] ? acc[item] + 1 : 1;
+    return acc;
+  }, {});
+ // Note the initial value is an empty object
