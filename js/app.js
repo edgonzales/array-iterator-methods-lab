@@ -20,3 +20,11 @@ const inventors = [
 const inventors1500s = inventors.filter(inventors =>inventors.year >= 1500 && inventors.year <1600)
 console.log(inventors1500s);
 
+// Array.prototype.map()
+// 2. Map the array of the inventors into a new array containing objects with just the first and last names as properties
+// Hint:  Return a new object literal from the callback (don't mutate the object being passed in to map)
+//let names = "";
+const names = inventors.map(function(name) {
+    let firstLastNames = `${name.first} ${name.last}`;
+    return firstLastNames;
+})
