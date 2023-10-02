@@ -39,8 +39,33 @@ console.log(firstNameAda);
 
 // Array.prototype.reduce()
 // 5. How many years did all the inventors live?
-const ages = inventors.map(function(age) {
+const inventorAges = inventors.map(function(age) {
     let passedMinusYear = age.passed - age.year;
     return passedMinusYear;
 })
-const ageSum = ages.reduce((acc, age) => acc + age, 0);
+const inventorAgeSum = inventorAges.reduce((acc, age) => acc + age, 0);
+
+const people = [
+    'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry',
+    'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul',
+    'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David',
+    'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana',
+    'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar',
+    'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric',
+    'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell',
+    'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph',
+    'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank',
+    'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony',
+    'Blake, William'
+  ];
+  
+  // Array.prototype.map()
+  // 6. Map the people array such that the new array consists of strings with the names formatted as 
+  // "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
+  // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
+  const peopleOrderedByFirstLastName = people.map(function(person) {
+    let personSplit = person.split(",");
+    personSplit.reverse();
+    let personJoined = personSplit.join(" ")
+    return personJoined;
+  })
