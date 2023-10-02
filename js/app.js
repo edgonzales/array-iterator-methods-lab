@@ -31,3 +31,8 @@ const names = inventors.map(function(name) {
 // Array.prototype.sort()
 // 3. Sort the inventors by birth date (year property), in ascending order
 inventors.sort((a, b) => a.year - b.year);
+
+// Array.prototype.find()
+// 4. Find the inventor object with the first name of 'Ada'
+const firstNameAda = inventors.find((name) => name.first === 'Ada')
+console.log(firstNameAda);
