@@ -111,3 +111,8 @@ const people = [
         return false;
     }
   })
+
+  // Array.prototype.every()
+// 9. Check if everyone is 19 or older?
+const isEveryoneNineteenOrOlder = devs.every((dev) => (todaysYear - dev.year) >= 19);
+console.log(isEveryoneNineteenOrOlder);
