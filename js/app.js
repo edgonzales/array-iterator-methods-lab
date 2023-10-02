@@ -116,3 +116,15 @@ const people = [
 // 9. Check if everyone is 19 or older?
 const isEveryoneNineteenOrOlder = devs.every((dev) => (todaysYear - dev.year) >= 19);
 console.log(isEveryoneNineteenOrOlder);
+
+const comments = [
+    { text: 'Love this!', id: 523423 },
+    { text: 'Super good', id: 823423 },
+    { text: 'You are the best', id: 2039842 },
+    { text: 'Ramen is my fav food ever', id: 123523 },
+    { text: 'Nice Nice Nice!', id: 542328 }
+  ];
+  
+  // Array.prototype.find()
+  // 10. Find the comment with the id of 823423
+  const superGoodCommentID = comments.find((comment) => comment.id === 823423)
