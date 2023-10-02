@@ -1,4 +1,5 @@
-console.log('IM alve!');
+// Array Iterator Methods Lab
+// https://git.generalassemb.ly/SEI-CC/sei-9-25/blob/main/Unit_1/07-js-continued/7.4.1-array-iterator-methods-lab.md
 
 const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
@@ -127,4 +128,8 @@ const comments = [
   
   // Array.prototype.find()
   // 10. Find the comment with the id of 823423
-  const superGoodCommentID = comments.find((comment) => comment.id === 823423)
+  const superGoodComment = comments.find((comment) => comment.id === 823423);
+
+// Array.prototype.findIndex()
+// 11. Find the index of the comment with an id of 123523
+const idxRamenComment = comments.findIndex((comment) => comment.id === 123523);
