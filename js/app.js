@@ -19,7 +19,6 @@ const inventors = [
   // Array.prototype.filter()
   // 1. Filter the array of inventors into a new array containing only the inventors born in the 1500's
 const inventors1500s = inventors.filter(inventors =>inventors.year >= 1500 && inventors.year <1600)
-console.log(inventors1500s);
 
 // Array.prototype.map()
 // 2. Map the array of the inventors into a new array containing objects with just the first and last names as properties
@@ -36,7 +35,6 @@ inventors.sort((a, b) => a.year - b.year);
 // Array.prototype.find()
 // 4. Find the inventor object with the first name of 'Ada'
 const firstNameAda = inventors.find((name) => name.first === 'Ada')
-console.log(firstNameAda);
 
 // Array.prototype.reduce()
 // 5. How many years did all the inventors live?
@@ -87,11 +85,7 @@ const people = [
     acc[item] = acc[item] ? acc[item] + 1 : 1;
     return acc;
   }, {});
-  console.log(itemInstanceCount)
  // Note the initial value is an empty object
-
- // QUESTIONS
- // 1. Explain the logic of not having an initial Value in the reduce function, applied to Ex 7.
 
  const devs = [
     { name: 'Wes', year: 1988 },
@@ -104,7 +98,6 @@ const people = [
   // 8. Check if at least one person is 19 or older?
   // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
   const todaysYear = new Date().getFullYear();
-  console.log(todaysYear);
   const isNineteenOrOlder = devs.some((dev) => {
     if((todaysYear - dev.year) >= 19) {
         return true;
@@ -116,7 +109,6 @@ const people = [
   // Array.prototype.every()
 // 9. Check if everyone is 19 or older?
 const isEveryoneNineteenOrOlder = devs.every((dev) => (todaysYear - dev.year) >= 19);
-console.log(isEveryoneNineteenOrOlder);
 
 const comments = [
     { text: 'Love this!', id: 523423 },
